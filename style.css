@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'EditorialNew';
+    src: url("./assets/fonts/PPEditorialNew-Regular.otf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: blue;
+    font-family: EditorialNew;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: rgb(226, 226, 226);
+    overflow-x: hidden;
+}
+
+h1{
+    font-family: EditorialNew;
+    font-size: 3rem;
+    font-weight: normal;
+    line-height: 3rem;
+    color: blue;
+}
+
+h2{
+    color: rgb(146, 146, 146);
+    font-size: 1.1rem;
+    padding-bottom: 3px;
+
+}
+
+h4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: rgb(146, 146, 146);
+    margin-top: -5px;
+}
+
+.wrapper{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+    z-index: 100;
+    animation: moveOut 750ms forwards;
+}
+
+@keyframes moveOut {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+    
+}
+
+.title h2{
+    font-size: .2rem;
+}
+
+
+.intro{
+    padding: 7vw;
+    padding-top: 5dvh;
+    overflow: hidden;
+    width: 100%;
+}
+
+.cover-overlay{
+    width: 86%;
+    margin: auto;
+    height: 50vh;
+    margin-top: 5vh;
+    background-color: blue;
+    position: absolute;
+    animation: rightLeft 1s infinite;
+
+}
+
+.cover-image{
+    width: 100%;
+    margin: auto;
+    height: 50vh;
+    margin-top: 5vh;
+    background-color: blue;
+    background-image: url("./assets/images/sjCover.jpg");
+    background-size: cover;
+    animation: rightLeft 2s infinite;
+}
+
+
+.images{
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+
+.click-image{
+    width:86%;
+    margin: auto;
+    cursor: pointer;
+    margin-bottom: 5vh;
+}
+
+.click-image img{
+    width: 100%;
+    margin: auto;
+}
+
+.click-image h3{
+    color: white;
+    padding: 5px 0px 5px 10px;
+    margin-top: -6vh;
+}
+
+.video-tag{
+    width: 100%;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.video-tag img{
+    width: 50%;
+    margin-left: 25%;
+    mix-blend-mode: multiply;
+}
+
+.tap{
+    color: blue;
+    font-size: 1.5rem;
+    font-family: EditorialNew;
+    position: absolute;
+    right: 15vw;
+    margin-top: 2vh;
+    animation: rightLeft 1.2s infinite;
+}
+
+.tap-image img{
+    width: 25%;
+    z-index: 5;
+    position: absolute;
+    left: -20vw;
+    margin-top: 12vh;
+    animation: rightLeft 1.5s infinite;
+}
+
+.description{
+    width: 86%;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    color: blue;
+    font-family: arial;
+    font-size: 1rem;
+    letter-spacing: .02rem;
+    line-height: 1.3rem;
+}
+
+.boosted{
+    font-family: EditorialNew;
+    letter-spacing: .07rem;
+    background-color: blue;
+    color: white;
+    padding: 3px;
+}
+
+@keyframes rightLeft {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.message{
+    display: none;
+}
+
+@media screen and (min-width: 645px) {
+    .message{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        z-index: 100;
+        color: blue;
+        font-family: EditorialNew;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .message-text{
+        animation: rightLeft 1.2s infinite;
+        background-color: white;
+        z-index: 100;
+        border: 1px dashed blue;
+        padding: 15px;
+    }
+
+    .back{
+        position: absolute;
+        color: blue;
+        background-color: blue;
+        animation: rightLeft 2s infinite;
+        z-index: 99;
+    }
+    
+}
+
+
+
+
